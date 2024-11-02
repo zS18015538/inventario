@@ -6,16 +6,6 @@
     <div class="form-container">
         <h2>Agregar Nuevo Producto</h2>
 
-        @if ($errors->any())
-            <div class="error">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <form action="{{ route('productos.store') }}" method="POST" class="product-form">
             @csrf
             <div class="form-group">
@@ -30,7 +20,6 @@
                 <button type="submit" class="submit-button">Agregar Producto</button>
                 <a href="{{ route('productos.index') }}" class="cancel-button">Cancelar</a>
             </div>
-
         </form>
     </div>
 @endsection

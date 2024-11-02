@@ -1,5 +1,3 @@
-<!-- resources/views/productos/inventario.blade.php -->
-
 @extends('layouts.app')
 
 @section('title', 'Inventario de Productos')
@@ -8,17 +6,11 @@
     <div class="dashboard-container">
         <h2>Inventario de Productos</h2>
 
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
         @if(Auth::user()->idRol == 1)
             <a href="{{ route('productos.create') }}" class="add-button">Agregar Nuevo Producto</a>
         @endif
 
-        <table class="product-table">
+        <table id="productos-table" class="product-table display">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -28,7 +20,7 @@
                     <th>Estatus</th>
                     @if(Auth::user()->idRol == 1)
                         <th>Acciones</th>
-                        <th>Inventario</th> <!-- Nueva columna para acciones de inventario -->
+                        <th>Inventario</th>
                     @endif
                 </tr>
             </thead>
@@ -43,10 +35,10 @@
                         @if(Auth::user()->idRol == 1)
                             <td>
                                 <a href="{{ route('productos.edit', $producto->idProducto) }}" class="edit-button">Editar</a>
-                                <form action="{{ route('productos.destroy', $producto->idProducto) }}" method="POST" class="inline-form">
+                                <form action="{{ route('productos.destroy', $producto->idProducto) }}" method="POST" class="inline-form delete-form" data-title="¿Cambiar Estatus?" data-text="¿Quieres cambiar el estatus de este producto?">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="action-button" onclick="return confirm('¿Estás seguro de cambiar el estatus de este producto?')">
+                                    <button type="submit" class="action-button">
                                         {{ $producto->estatus ? 'Dar de Baja' : 'Reactivar' }}
                                     </button>
                                 </form>

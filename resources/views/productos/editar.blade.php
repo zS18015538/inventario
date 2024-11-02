@@ -6,16 +6,6 @@
     <div class="form-container">
         <h2>Editar Producto</h2>
 
-        @if ($errors->any())
-            <div class="error">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <form action="{{ route('productos.update', $producto->idProducto) }}" method="POST" class="product-form">
             @csrf
             @method('PUT')
