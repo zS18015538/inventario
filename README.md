@@ -25,3 +25,11 @@ Contraseña: password
 **USUARIO ALMACENISTA**
 Correo: almacenista@empresa.com
 Contraseña: password
+
+## Datos de Acceso
+
+| CORREO  | CONTRASEÑA | ROL | 
+| ------------- |:-------------:|:-------------:|
+| admin@empresa.com      | password     |ADMINISTRADOR|
+| almacenista@empresa.com      | password     |ALMACENISTA |
+
