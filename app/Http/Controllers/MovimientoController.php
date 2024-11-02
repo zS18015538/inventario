@@ -79,6 +79,6 @@ class MovimientoController extends Controller
             'cantidad' => $request->cantidad,
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Salida de producto registrada exitosamente.');
+        return redirect()->route('productos.index')->with('success', 'Salida de producto registrada exitosamente.');
     }
 }
