@@ -9,14 +9,16 @@
 
 **Pasos para correr la aplicación:**
 
- - Tener instalado node v18.17.1
+ - Tener instalado los siguientes recursos:
+ - node v18.17.1
  - npm 10.1.0
  - PHP  8
- - Correr el script 1 que se encuentra en la carpeta 1 SCRIPTS llamado inventario_db.sql
+ - Correr el script que se encuentra en la carpeta 1 SCRIPTS llamado inventario_db.sql.
  - Ubicarse dentro de la carpeta de proyecto y ejecutarlo con el siguiente comando: `php artisan serve`
 
 **Datos de acceso:**
-USUARIO ADMINISTRADOR:
+
+**USUARIO ADMINISTRADOR:**
 Correo: admin@empresa.com
 Contraseña: password
 
