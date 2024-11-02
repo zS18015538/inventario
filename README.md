@@ -13,7 +13,8 @@
  - node v18.17.1
  - npm 10.1.0
  - PHP  8
- - Correr el script que se encuentra en la carpeta 1 SCRIPTS llamado inventario_db.sql.
+ - Correr el script que se encuentra en la carpeta 1 SCRIPTS llamado inventario_db.sql
+ - Modificar el archivo .env (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD) y agregar sus datos de conexión de la base de datos
  - Ubicarse dentro de la carpeta de proyecto y ejecutarlo con el siguiente comando: `php artisan serve`
 
 **Datos de acceso:**
